@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jQuery3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+
+<scrip href="app.js"></scrip>
+    <title>tuto nodejs</title>
+</head>
+<body>
+    <textarea name="" id="text-input" oninput="this.editor.update()" cols="30" rows="10">
+        Type **markdown here 
+    </textarea>
+    <div id="preview"></div>
+    <script src="./node_modules/markdown.js"></script>
+    <script>
+        function Editor(input, preview) {
+            this.update = function () {
+                preview.innerHTML = markdown.toHTML(input.value);
+            };
+            input.editor = this;
+            this.update();
+        }
+        var $ = function (id) {
+            return document.getElementById(id);
+        };
+        new Editor($("text-input"), $("preview"));
+    </script>
+
+    <input type="text" placeholder="Enter your name" id="name"/>
+    <input type="button" value="OK" onclick="valid()"/>
+    <div id="message"></div>
+
+<button id="variable">Cliquer</button>
+
+    
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></scrip>
+    
+</body>
+</html>
